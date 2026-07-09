@@ -1,51 +1,62 @@
+import Image from "next/image";
 import type { Company } from "@/data/companies";
 
 interface BrandCardProps {
   company: Company;
-  index: number;
 }
 
-export default function BrandCard({ company, index }: BrandCardProps) {
+export default function BrandCard({ company }: BrandCardProps) {
   return (
     <a
       href={company.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group relative flex flex-col overflow-hidden rounded-2xl border border-stone-200 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-stone-300 hover:shadow-xl hover:shadow-stone-200/50"
-      style={{ animationDelay: `${index * 100}ms` }}
+      className="group flex flex-col overflow-hidden border border-border bg-surface transition-colors duration-500 hover:border-accent/30"
     >
-      <div
-        className="mb-6 h-1 w-12 rounded-full transition-all duration-300 group-hover:w-16"
-        style={{ backgroundColor: company.accent }}
-      />
-      <h3 className="font-serif text-2xl text-stone-900">{company.name}</h3>
-      <p
-        className="mt-1 text-sm font-medium tracking-wide uppercase"
-        style={{ color: company.accent }}
-      >
-        {company.tagline}
-      </p>
-      <p className="mt-4 flex-1 text-sm leading-relaxed text-stone-600">
-        {company.description}
-      </p>
-      <div className="mt-6 flex items-center justify-between border-t border-stone-100 pt-6">
-        <span className="text-sm text-stone-500">{company.domain}</span>
-        <span className="flex items-center gap-1 text-sm font-medium text-stone-900 transition-transform group-hover:translate-x-1">
-          Visit site
-          <svg
-            className="h-4 w-4"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M17 8l4 4m0 0l-4 4m4-4H3"
-            />
-          </svg>
-        </span>
+          <div className="relative aspect-[4/3] overflow-hidden bg-accent-light/30">
+        <Image
+          src={company.image}
+          alt={company.imageAlt}
+          fill
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        />
+        <div
+          className="absolute inset-0 opacity-20 mix-blend-multiply"
+          style={{ backgroundColor: company.accent }}
+        />
+      </div>
+
+      <div className="flex flex-1 flex-col p-8" style={{ backgroundColor: company.tint }}>
+        <div className="flex items-center justify-between">
+          <span
+            className="h-px w-8 transition-all duration-500 group-hover:w-12"
+            style={{ backgroundColor: company.accent }}
+          />
+          <span className="text-[11px] tracking-[0.15em] text-muted uppercase">
+            {company.domain}
+          </span>
+        </div>
+
+        <h3 className="mt-6 font-serif text-2xl font-light text-foreground">
+          {company.name}
+        </h3>
+        <p
+          className="mt-2 text-[11px] font-medium tracking-[0.25em] uppercase"
+          style={{ color: company.accent }}
+        >
+          {company.tagline}
+        </p>
+        <p className="mt-4 flex-1 text-[14px] leading-7 text-muted">
+          {company.description}
+        </p>
+
+        <div className="mt-6 flex items-center gap-2 text-[13px] text-foreground/70 transition-colors group-hover:text-accent">
+          <span>Visit website</span>
+          <span className="transition-transform duration-300 group-hover:translate-x-1">
+            →
+          </span>
+        </div>
       </div>
     </a>
   );

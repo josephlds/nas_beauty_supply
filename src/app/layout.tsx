@@ -40,7 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${cormorant.variable} ${dmSans.variable} scroll-smooth`}>
-      <body className="min-h-screen bg-stone-50 font-sans text-stone-900 antialiased">
+      <body className="min-h-screen bg-background font-sans text-foreground antialiased">
         {children}
       </body>
     </html>
