@@ -23,8 +23,8 @@ export default function Hero() {
             </div>
 
             <p className="mt-8 max-w-md text-[15px] leading-7 text-muted sm:ml-[1.875rem] sm:pl-6">
-              A curated family of beauty and lifestyle brands — united by quality,
-              craft, and the pursuit of elegance.
+              A family of brands spanning premium nail care, professional beauty
+              tools, and science-backed wellness — united by quality and craft.
             </p>
 
             <div className="mt-10 flex items-center gap-6 sm:ml-[1.875rem] sm:pl-6">

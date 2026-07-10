@@ -12,7 +12,7 @@ export default function Footer() {
               NAS Beauty Supply
             </p>
             <p className="mt-4 max-w-xs text-[13px] leading-6">
-              Parent company for CCare Beauty, Felix Professional, and My Vocks.
+              Parent company for C Care Beauty, Felix Professional, and Vocks.
             </p>
           </div>
 

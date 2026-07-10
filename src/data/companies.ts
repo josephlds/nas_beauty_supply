@@ -6,84 +6,92 @@ export interface Company {
   description: string;
   accent: string;
   tint: string;
+  surface: string;
+  chrome: string;
   image: string;
   imageAlt: string;
 }
 
 export const companies: Company[] = [
   {
-    name: "CCare Beauty",
+    name: "C Care Beauty",
     domain: "ccarebeauty.com",
     url: "https://ccarebeauty.com",
-    tagline: "Care that shows",
+    tagline: "Elevate your nail routine",
     description:
-      "Premium beauty and personal care products crafted for everyday confidence and radiant skin.",
-    accent: "#c4a574",
-    tint: "#f7f0e6",
-    image: "/images/brand-ccare.png",
-    imageAlt: "Skincare and beauty products on a minimal surface",
+      "Premium nail essentials — cuticle oils, polish removers, and nail treatments — crafted for stronger nails, lasting color, and polished results every day.",
+    accent: "#1a1a1a",
+    tint: "#f6f1e8",
+    surface: "#ffffff",
+    chrome: "#f6f1e8",
+    image: "/images/brand-ccare-hero.jpg",
+    imageAlt: "C Care Beauty premium nail essentials",
   },
   {
     name: "Felix Professional",
     domain: "felixprofessional.com",
     url: "https://felixprofessional.com",
-    tagline: "Professional-grade results",
+    tagline: "Use what the pros use",
     description:
-      "Salon-quality tools and formulations trusted by stylists and beauty professionals worldwide.",
-    accent: "#6b4e5a",
-    tint: "#f3ecef",
-    image: "/images/brand-felix.png",
-    imageAlt: "Professional salon interior with styling chairs",
+      "Professional-grade makeup brush cleaner, sanitizer, and conditioner — a rinse-free formula developed with pro MUAs for everyday brush care.",
+    accent: "#A36ECC",
+    tint: "#f5eef9",
+    surface: "#ffffff",
+    chrome: "#f3f3f3",
+    image: "/images/brand-felix-tin.jpg",
+    imageAlt: "Felix Professional brush cleaner bottle and tin",
   },
   {
-    name: "My Vocks",
+    name: "Vocks",
     domain: "myvocks.com",
     url: "https://myvocks.com",
-    tagline: "Style from the ground up",
+    tagline: "Proven. Pure. Trusted.",
     description:
-      "Trend-forward footwear and accessories that complement your look from head to toe.",
-    accent: "#d4a5a5",
-    tint: "#faf0f0",
-    image: "/images/brand-vocks.png",
-    imageAlt: "Stylish footwear and fashion accessories",
+      "Science-backed dietary supplements — including creatine, magnesium, and black seed oil — third-party tested, GMP-certified, and made in the USA.",
+    accent: "#242833",
+    tint: "#f3f3f3",
+    surface: "#ffffff",
+    chrome: "#242833",
+    image: "/images/brand-vocks-creatine.png",
+    imageAlt: "Vocks Creatine Monohydrate supplement",
   },
 ];
 
 export const heroImages = {
   main: {
-    src: "/images/hero-main.png",
-    alt: "Elegant beauty products arranged on a soft neutral backdrop",
+    src: "/images/hero-ccare-hero.jpg",
+    alt: "C Care Beauty premium nail products hero",
   },
   accent: {
-    src: "/images/hero-accent.png",
-    alt: "Close-up of premium cosmetic textures",
+    src: "/images/hero-ccare-oil.png",
+    alt: "C Care Beauty Lavender and Chamomile cuticle oil",
   },
 };
 
 export const galleryImages = [
   {
-    src: "/images/gallery-1.png",
-    alt: "Luxury makeup collection",
+    src: "/images/gallery-ccare-hero.jpg",
+    alt: "C Care Beauty premium nail essentials",
     className: "col-span-2 row-span-2 min-h-[240px] sm:min-h-[320px]",
   },
   {
-    src: "/images/gallery-2.png",
-    alt: "Hands applying skincare serum",
+    src: "/images/gallery-felix-cleaner.jpg",
+    alt: "Felix Professional 16oz makeup brush cleaner",
     className: "col-span-1 row-span-1 aspect-square",
   },
   {
-    src: "/images/gallery-3.png",
-    alt: "Minimal beauty flat lay",
+    src: "/images/gallery-vocks-creatine.png",
+    alt: "Vocks Creatine Monohydrate supplement",
     className: "col-span-1 row-span-1 aspect-square",
   },
   {
-    src: "/images/gallery-4.png",
-    alt: "Serum and skincare bottles",
+    src: "/images/gallery-ccare-body-oil.jpg",
+    alt: "C Care Beauty nourishing body oils",
     className: "col-span-2 row-span-1 aspect-[2/1]",
   },
 ];
 
 export const aboutImage = {
-  src: "/images/about.png",
-  alt: "Modern beauty studio workspace",
+  src: "/images/about-felix-spray.jpg",
+  alt: "Felix Professional travel size brush cleaner spray",
 };

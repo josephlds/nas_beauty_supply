@@ -1,5 +1,5 @@
-import Image from "next/image";
 import type { Company } from "@/data/companies";
+import SitePreview from "./SitePreview";
 
 interface BrandCardProps {
   company: Company;
@@ -11,38 +11,36 @@ export default function BrandCard({ company }: BrandCardProps) {
       href={company.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex flex-col overflow-hidden border border-border bg-surface transition-colors duration-500 hover:border-accent/30"
+      className="group flex flex-col overflow-hidden transition-colors duration-500"
+      style={{
+        backgroundColor: company.tint,
+        border: `1px solid ${company.accent}22`,
+      }}
     >
-          <div className="relative aspect-[4/3] overflow-hidden bg-accent-light/30">
-        <Image
-          src={company.image}
-          alt={company.imageAlt}
-          fill
-          className="object-cover transition-transform duration-700 group-hover:scale-105"
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-        />
-        <div
-          className="absolute inset-0 opacity-20 mix-blend-multiply"
-          style={{ backgroundColor: company.accent }}
-        />
-      </div>
+      <SitePreview company={company} />
 
-      <div className="flex flex-1 flex-col p-8" style={{ backgroundColor: company.tint }}>
+      <div className="flex flex-1 flex-col p-8">
         <div className="flex items-center justify-between">
           <span
             className="h-px w-8 transition-all duration-500 group-hover:w-12"
             style={{ backgroundColor: company.accent }}
           />
-          <span className="text-[11px] tracking-[0.15em] text-muted uppercase">
+          <span
+            className="text-[11px] tracking-[0.15em] uppercase opacity-60"
+            style={{ color: company.accent }}
+          >
             {company.domain}
           </span>
         </div>
 
-        <h3 className="mt-6 font-serif text-2xl font-light text-foreground">
+        <h3
+          className="mt-6 font-serif text-2xl font-light"
+          style={{ color: company.accent }}
+        >
           {company.name}
         </h3>
         <p
-          className="mt-2 text-[11px] font-medium tracking-[0.25em] uppercase"
+          className="mt-2 text-[11px] font-medium tracking-[0.25em] uppercase opacity-80"
           style={{ color: company.accent }}
         >
           {company.tagline}
@@ -51,7 +49,10 @@ export default function BrandCard({ company }: BrandCardProps) {
           {company.description}
         </p>
 
-        <div className="mt-6 flex items-center gap-2 text-[13px] text-foreground/70 transition-colors group-hover:text-accent">
+        <div
+          className="mt-6 flex items-center gap-2 text-[13px] opacity-70 transition-opacity group-hover:opacity-100"
+          style={{ color: company.accent }}
+        >
           <span>Visit website</span>
           <span className="transition-transform duration-300 group-hover:translate-x-1">
             →

@@ -17,18 +17,21 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: "NAS Beauty Supply | Our Brands",
   description:
-    "NAS Beauty Supply is the parent company behind CCare Beauty, Felix Professional, and My Vocks — a family of beauty and lifestyle brands.",
+    "NAS Beauty Supply is the parent company behind C Care Beauty, Felix Professional, and Vocks — premium nail care, pro beauty tools, and wellness supplements.",
   keywords: [
     "NAS Beauty Supply",
-    "CCare Beauty",
+    "C Care Beauty",
     "Felix Professional",
-    "My Vocks",
+    "Vocks",
     "beauty brands",
+    "nail care",
+    "makeup brush cleaner",
+    "supplements",
   ],
   openGraph: {
     title: "NAS Beauty Supply | Our Brands",
     description:
-      "Discover the brands under NAS Beauty Supply — CCare Beauty, Felix Professional, and My Vocks.",
+      "Discover the brands under NAS Beauty Supply — C Care Beauty, Felix Professional, and Vocks.",
     type: "website",
   },
 };

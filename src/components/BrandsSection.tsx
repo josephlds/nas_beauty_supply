@@ -15,8 +15,8 @@ export default function BrandsSection() {
             </h2>
           </div>
           <p className="max-w-xs text-[14px] leading-7 text-muted">
-            Each brand stands on its own — connected by a shared standard of
-            excellence.
+            Each brand stands on its own — click a card to visit the live
+            website. Previews show the actual storefront.
           </p>
         </div>
 

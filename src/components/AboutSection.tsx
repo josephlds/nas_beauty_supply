@@ -54,9 +54,10 @@ export default function AboutSection() {
                 unique identity.
               </p>
               <p>
-                From CCare Beauty&apos;s personal care, to Felix Professional&apos;s
-                salon-grade tools, and My Vocks&apos; trend-forward accessories —
-                every brand shares one promise: quality you can trust.
+                From C Care Beauty&apos;s premium nail essentials, to Felix
+                Professional&apos;s pro makeup brush cleaners, and Vocks&apos;
+                science-backed supplements — every brand shares one promise:
+                quality you can trust.
               </p>
               <p className="text-foreground/80">
                 This is the home of NAS Beauty Supply — your gateway to our family
