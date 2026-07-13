@@ -7,14 +7,15 @@ export default function AboutSection() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid gap-16 lg:grid-cols-2 lg:gap-20 lg:items-center">
           <div className="relative order-2 lg:order-1">
-            <div className="relative aspect-[4/5] overflow-hidden bg-accent-light/30">
+            <div className="relative aspect-[4/5] overflow-hidden bg-accent-light/30 shadow-[0_40px_80px_-40px_rgba(107,78,90,0.3)]">
               <Image
                 src={aboutImage.src}
                 alt={aboutImage.alt}
                 fill
-                className="object-cover"
+                className="object-cover transition-transform duration-700 ease-out hover:scale-[1.03]"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#2a2420]/20 via-transparent to-transparent" />
             </div>
             <div className="absolute -bottom-4 -right-4 hidden h-24 w-24 border border-border bg-accent-light/40 sm:block" />
             <div className="absolute -top-4 -left-4 hidden h-16 w-16 bg-gold/20 sm:block" />
