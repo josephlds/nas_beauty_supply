@@ -1,9 +1,8 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import GalleryStrip from "@/components/GalleryStrip";
-import BrandLogosSection from "@/components/BrandLogosSection";
-import BrandsSection from "@/components/BrandsSection";
 import AboutSection from "@/components/AboutSection";
+import BrandsSection from "@/components/BrandsSection";
+import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -12,10 +11,9 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <GalleryStrip />
-        <BrandLogosSection />
-        <BrandsSection />
         <AboutSection />
+        <BrandsSection />
+        <ContactSection />
       </main>
       <Footer />
     </>

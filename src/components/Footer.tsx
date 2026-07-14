@@ -4,11 +4,11 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border bg-foreground text-background/60">
-      <div className="mx-auto max-w-5xl px-6 py-16">
+    <footer className="border-t border-border bg-ink text-white/55">
+      <div className="mx-auto max-w-6xl px-6 py-16">
         <div className="flex flex-col gap-12 sm:flex-row sm:justify-between">
           <div>
-            <p className="text-[11px] font-medium tracking-[0.25em] text-background uppercase">
+            <p className="font-serif text-xl tracking-tight text-white">
               NAS Beauty Supply
             </p>
             <p className="mt-4 max-w-xs text-[13px] leading-6">
@@ -18,7 +18,7 @@ export default function Footer() {
 
           <div className="flex gap-16">
             <div>
-              <p className="text-[10px] tracking-[0.2em] text-background/40 uppercase">
+              <p className="text-[10px] tracking-[0.2em] text-white/35 uppercase">
                 Brands
               </p>
               <ul className="mt-4 space-y-2">
@@ -28,7 +28,7 @@ export default function Footer() {
                       href={company.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[13px] transition-colors hover:text-background"
+                      className="text-[13px] transition-colors hover:text-white"
                     >
                       {company.name}
                     </a>
@@ -38,18 +38,32 @@ export default function Footer() {
             </div>
 
             <div>
-              <p className="text-[10px] tracking-[0.2em] text-background/40 uppercase">
+              <p className="text-[10px] tracking-[0.2em] text-white/35 uppercase">
                 Navigate
               </p>
               <ul className="mt-4 space-y-2">
                 <li>
-                  <a href="#brands" className="text-[13px] transition-colors hover:text-background">
+                  <a
+                    href="#about"
+                    className="text-[13px] transition-colors hover:text-white"
+                  >
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#brands"
+                    className="text-[13px] transition-colors hover:text-white"
+                  >
                     Brands
                   </a>
                 </li>
                 <li>
-                  <a href="#about" className="text-[13px] transition-colors hover:text-background">
-                    About
+                  <a
+                    href="#contact"
+                    className="text-[13px] transition-colors hover:text-white"
+                  >
+                    Contact
                   </a>
                 </li>
               </ul>
@@ -57,19 +71,10 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 flex items-center justify-between border-t border-background/10 pt-8">
+        <div className="mt-16 border-t border-white/10 pt-8">
           <p className="text-[11px] tracking-wide">
             © {year} NAS Beauty Supply
           </p>
-          <div className="flex gap-2">
-            {companies.map((company) => (
-              <span
-                key={company.domain}
-                className="h-1 w-1 rounded-full bg-background/30"
-                style={{ backgroundColor: `${company.accent}99` }}
-              />
-            ))}
-          </div>
         </div>
       </div>
     </footer>

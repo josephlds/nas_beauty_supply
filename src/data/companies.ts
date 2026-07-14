@@ -4,14 +4,15 @@ export interface Company {
   url: string;
   tagline: string;
   description: string;
-  accent: string;
-  tint: string;
-  surface: string;
-  chrome: string;
   logo: string;
   logoAlt: string;
   image: string;
   imageAlt: string;
+}
+
+export interface Pillar {
+  title: string;
+  description: string;
 }
 
 export const companies: Company[] = [
@@ -22,14 +23,11 @@ export const companies: Company[] = [
     tagline: "Elevate your nail routine",
     description:
       "Luxury nail essentials — signature cuticle oils, polish removers, and treatments — crafted for stronger nails, lasting color, and polished results every day.",
-    accent: "#1a1a1a",
-    tint: "#f6f1e8",
-    surface: "#ffffff",
-    chrome: "#f6f1e8",
     logo: "/images/logos/ccare.png",
     logoAlt: "C Care Beauty — Love yourself",
-    image: "/images/brand-ccare-cuticle-lux.jpg",
-    imageAlt: "C Care Beauty Lavender & Chamomile cuticle oil",
+    image: "/images/Generated Image July 15, 2026 - 1_04AM.jpg",
+    imageAlt:
+      "C Care Beauty product collection on vanity — cuticle oil, castor oil, cuticle remover, and lip oil",
   },
   {
     name: "Felix Professional",
@@ -38,14 +36,11 @@ export const companies: Company[] = [
     tagline: "Use what the pros use",
     description:
       "Pro-grade makeup brush cleaner, sanitizer, and conditioner — a rinse-free formula developed with MUAs for effortless, everyday brush care.",
-    accent: "#A36ECC",
-    tint: "#f5eef9",
-    surface: "#ffffff",
-    chrome: "#f3f3f3",
     logo: "/images/logos/felix.png",
     logoAlt: "Felix Professional logo",
-    image: "/images/brand-felix-lux.jpg",
-    imageAlt: "Felix Professional brush cleaner bottle and tin",
+    image: "/images/Generated Image July 15, 2026 - 1_10AM (1).jpg",
+    imageAlt:
+      "Felix Professional lifestyle collection — brush cleaner, tin, travel spray, and sponge",
   },
   {
     name: "Vocks",
@@ -54,52 +49,40 @@ export const companies: Company[] = [
     tagline: "Proven. Pure. Trusted.",
     description:
       "Science-backed dietary supplements — creatine, magnesium, and black seed oil — third-party tested, GMP-certified, and made in the USA.",
-    accent: "#242833",
-    tint: "#f3f3f3",
-    surface: "#ffffff",
-    chrome: "#242833",
     logo: "/images/logos/vocks.png",
     logoAlt: "Vocks logo",
-    image: "/images/brand-vocks-lux.jpg",
-    imageAlt: "Vocks Creatine Monohydrate supplement",
+    image: "/images/Generated Image July 15, 2026 - 1_13AM.jpg",
+    imageAlt:
+      "Vocks lifestyle collection — creatine, magnesium, black seed oil, and 5-MTHF",
   },
 ];
 
-export const heroImages = {
-  main: {
-    src: "/images/hero-ccare-cuticle-lux.jpg",
-    alt: "C Care Beauty Lavender & Chamomile cuticle oil on marble",
+export const pillars: Pillar[] = [
+  {
+    title: "Brand Development",
+    description:
+      "Our team works from concept to shelf — shaping product lines, packaging, and brand identity so each company in our portfolio can lead in its category.",
   },
-  accent: {
-    src: "/images/accent-ccare-cuticle-lux.jpg",
-    alt: "C Care Beauty Lavender and Chamomile cuticle oil",
+  {
+    title: "Quality & Compliance",
+    description:
+      "Integrity is non-negotiable. We hold every brand to clear standards of transparency, safety, and ethical practice across manufacturing and go-to-market.",
   },
+  {
+    title: "Distribution & Growth",
+    description:
+      "From inventory to retail and e-commerce, we support the systems that get our brands into the hands of customers — reliably and at scale.",
+  },
+];
+
+export const heroImage = {
+  src: "/images/hero-ccare-cuticle-lux.jpg",
+  alt: "Beauty product photography from the NAS Beauty Supply portfolio",
 };
-
-export const galleryImages = [
-  {
-    src: "/images/hero-ccare-cuticle-lux.jpg",
-    alt: "C Care Beauty Lavender & Chamomile cuticle oil",
-    className: "col-span-2 row-span-2 min-h-[240px] sm:min-h-[320px]",
-  },
-  {
-    src: "/images/gallery-felix-lux.jpg",
-    alt: "Felix Professional makeup brush cleaner with brushes",
-    className: "col-span-1 row-span-1 aspect-square",
-  },
-  {
-    src: "/images/gallery-vocks-lux.jpg",
-    alt: "Vocks Creatine Monohydrate with water and scoop",
-    className: "col-span-1 row-span-1 aspect-square",
-  },
-  {
-    src: "/images/gallery-ccare-cuticle-lux.jpg",
-    alt: "Applying C Care Beauty Lavender & Chamomile cuticle oil",
-    className: "col-span-2 row-span-1 aspect-[2/1]",
-  },
-];
 
 export const aboutImage = {
   src: "/images/about-felix-lux.jpg",
-  alt: "Felix Professional travel spray brush cleaner in cosmetic bag",
+  alt: "Professional beauty products from the NAS Beauty Supply family of brands",
 };
+
+export const contactEmail = "hello@nasbeautysupply.com";

@@ -1,28 +1,32 @@
 import { companies } from "@/data/companies";
-import BrandCard from "./BrandCard";
+import BrandShowcase from "./BrandShowcase";
 
 export default function BrandsSection() {
   return (
-    <section id="brands" className="py-24 sm:py-32">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <p className="text-[11px] font-medium tracking-[0.35em] text-accent uppercase">
-              Portfolio
-            </p>
-            <h2 className="mt-4 font-serif text-3xl font-light tracking-tight text-foreground sm:text-4xl">
-              Our brands
-            </h2>
-          </div>
-          <p className="max-w-xs text-[14px] leading-7 text-muted">
-            Each brand stands on its own — click a card to visit the live
-            website. Previews show the actual storefront.
+    <section id="brands" className="scroll-mt-20 bg-surface">
+      <div className="mx-auto max-w-6xl px-6 pt-24 sm:pt-32">
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="text-[11px] font-medium tracking-[0.3em] text-accent uppercase">
+            Our Brands
+          </p>
+          <h2 className="mt-4 font-serif text-3xl font-medium tracking-tight text-ink sm:text-4xl lg:text-[2.75rem]">
+            A portfolio built with purpose
+          </h2>
+          <p className="mt-6 text-[15px] leading-7 text-muted">
+            We are dedicated to brands that embody innovation, inclusivity, and
+            unwavering standards. From premium nail care to professional tools
+            and science-backed wellness — each brand stands on its own while
+            sharing one foundation of quality.
           </p>
         </div>
 
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {companies.map((company) => (
-            <BrandCard key={company.domain} company={company} />
+        <div className="mt-6">
+          {companies.map((company, index) => (
+            <BrandShowcase
+              key={company.domain}
+              company={company}
+              reverse={index % 2 === 1}
+            />
           ))}
         </div>
       </div>

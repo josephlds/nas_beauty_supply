@@ -1,16 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #faf8f5;
-  --foreground: #2a2420;
-  --muted: #8a8178;
-  --accent: #6b4e5a;
-  --accent-light: #e8d5dc;
-  --gold: #c4a574;
-  --rose: #d4a5a5;
-  --sage: #9aab94;
-  --border: #e8e2dc;
+  --background: #f7f6f4;
+  --foreground: #1c1c1c;
+  --muted: #6b6b6b;
+  --accent: #a85d68;
+  --accent-light: #f0e4e6;
+  --border: #e2e0dc;
   --surface: #ffffff;
+  --stone: #ebe9e6;
+  --ink: #0f0f0f;
 }
 
 @theme inline {
@@ -19,11 +18,10 @@
   --color-muted: var(--muted);
   --color-accent: var(--accent);
   --color-accent-light: var(--accent-light);
-  --color-gold: var(--gold);
-  --color-rose: var(--rose);
-  --color-sage: var(--sage);
   --color-border: var(--border);
   --color-surface: var(--surface);
+  --color-stone: var(--stone);
+  --color-ink: var(--ink);
   --font-sans: var(--font-sans), system-ui, sans-serif;
   --font-serif: var(--font-serif), Georgia, serif;
 }
@@ -48,4 +46,44 @@ body {
 ::selection {
   background: var(--accent-light);
   color: var(--foreground);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.9s ease-out both;
+}
+
+.animate-fade-in {
+  animation: fade-in 1.1s ease-out both;
+}
+
+.animate-delay-100 {
+  animation-delay: 0.1s;
+}
+
+.animate-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animate-delay-300 {
+  animation-delay: 0.3s;
 }

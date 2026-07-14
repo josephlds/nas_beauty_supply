@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, DM_Sans } from "next/font/google";
+import { Newsreader, Outfit } from "next/font/google";
 import "./globals.css";
 
-const cormorant = Cormorant_Garamond({
+const newsreader = Newsreader({
   variable: "--font-serif",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
 
-const dmSans = DM_Sans({
+const outfit = Outfit({
   variable: "--font-sans",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -17,16 +17,14 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: "NAS Beauty Supply | Our Brands",
   description:
-    "NAS Beauty Supply is the parent company behind C Care Beauty, Felix Professional, and Vocks — premium nail care, pro beauty tools, and wellness supplements.",
+    "NAS Beauty Supply is the parent company behind C Care Beauty, Felix Professional, and Vocks — a portfolio of beauty and wellness brands built on quality and craft.",
   keywords: [
     "NAS Beauty Supply",
     "C Care Beauty",
     "Felix Professional",
     "Vocks",
     "beauty brands",
-    "nail care",
-    "makeup brush cleaner",
-    "supplements",
+    "parent company",
   ],
   openGraph: {
     title: "NAS Beauty Supply | Our Brands",
@@ -42,7 +40,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${dmSans.variable} scroll-smooth`}>
+    <html
+      lang="en"
+      className={`${newsreader.variable} ${outfit.variable} scroll-smooth`}
+    >
       <body className="min-h-screen bg-background font-sans text-foreground antialiased">
         {children}
       </body>
