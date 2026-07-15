@@ -19,7 +19,7 @@ export default function Hero() {
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-6 pb-20 pt-32 sm:pb-28 lg:pb-32">
         <h1 className="animate-fade-up font-serif text-[2.75rem] leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-[5rem]">
-          NAS Beauty Supply
+          NAS Beauty
         </h1>
         <p className="animate-fade-up animate-delay-100 mt-5 max-w-lg text-[15px] leading-7 text-white/75 sm:text-base">
           A family of beauty and wellness brands united by quality, craft, and
