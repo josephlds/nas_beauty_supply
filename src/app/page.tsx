@@ -6,6 +6,8 @@ import BrandsSection from "@/components/BrandsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
+export const dynamic = "force-dynamic";
+
 const IMAGE_EXTENSIONS = new Set([".jpg", ".jpeg", ".png", ".webp", ".avif"]);
 
 function getHeroImages() {
