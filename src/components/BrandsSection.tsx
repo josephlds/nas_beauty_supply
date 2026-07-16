@@ -14,10 +14,10 @@ export default function BrandsSection() {
           </h2>
           <div className="mt-6 space-y-5 text-[15px] leading-7 text-muted">
             <p>
-              NAS Beauty Supply is a parent company dedicated to acquiring and
-              growing brands that embody innovation, quality, and unwavering
-              standards. We oversee every facet of brand stewardship — from
-              product development to how our brands show up for customers.
+              Dedicated to acquiring and growing brands that embody innovation,
+              quality, and unwavering standards. We oversee every facet of brand
+              stewardship — from product development to how our brands show up
+              for customers.
             </p>
             <p>
               Our mission is not just a goal; it is a relentless pursuit. Across
@@ -28,7 +28,17 @@ export default function BrandsSection() {
           </div>
         </div>
 
-        <div className="mt-16 grid gap-10 border-t border-border pt-16 sm:mt-20 sm:pt-20 md:grid-cols-3 md:gap-8 lg:gap-12">
+        <div className="mt-16 sm:mt-20">
+          {companies.map((company, index) => (
+            <BrandShowcase
+              key={company.domain}
+              company={company}
+              reverse={index % 2 === 1}
+            />
+          ))}
+        </div>
+
+        <div className="grid gap-10 border-t border-border pt-16 pb-8 sm:pt-20 md:grid-cols-3 md:gap-8 lg:gap-12">
           {pillars.map((pillar) => (
             <div key={pillar.title} className="text-center md:text-left">
               <h3 className="font-serif text-xl tracking-tight text-ink sm:text-2xl">
@@ -38,16 +48,6 @@ export default function BrandsSection() {
                 {pillar.description}
               </p>
             </div>
-          ))}
-        </div>
-
-        <div className="mt-6">
-          {companies.map((company, index) => (
-            <BrandShowcase
-              key={company.domain}
-              company={company}
-              reverse={index % 2 === 1}
-            />
           ))}
         </div>
       </div>
