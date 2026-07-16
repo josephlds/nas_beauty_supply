@@ -80,9 +80,27 @@ export const heroImage = {
   alt: "Soft morning light in a refined spa interior — the atmosphere of NAS Beauty Supply",
 };
 
-export const aboutImage = {
-  src: "/images/about-felix-lux.jpg",
-  alt: "Professional beauty products from the NAS Beauty Supply family of brands",
-};
+export const heroImages = [
+  {
+    src: "/images/hero/9f3f7c16-ad45-46d9-b567-02d5920530f4.jpeg",
+    alt: "NAS Beauty Supply atmosphere",
+  },
+  {
+    src: "/images/hero/Generated Image July 17, 2026 - 3_12AM.jpg",
+    alt: "NAS Beauty Supply atmosphere",
+  },
+  {
+    src: "/images/hero/Generated Image July 17, 2026 - 3_13AM.jpg",
+    alt: "NAS Beauty Supply atmosphere",
+  },
+  {
+    src: "/images/hero/Generated Image July 17, 2026 - 3_16AM.jpg",
+    alt: "NAS Beauty Supply atmosphere",
+  },
+  {
+    src: "/images/hero/Generated Image July 17, 2026 - 3_18AM.jpg",
+    alt: "NAS Beauty Supply atmosphere",
+  },
+];
 
 export const contactEmail = "hello@nasbeautysupply.com";

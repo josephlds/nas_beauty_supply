@@ -1,18 +1,49 @@
-import Image from "next/image";
-import { heroImage } from "@/data/companies";
+"use client";
 
-export default function Hero() {
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import { heroImages as fallbackHeroImages } from "@/data/companies";
+
+const INTERVAL_MS = 5000;
+
+interface HeroImage {
+  src: string;
+  alt: string;
+}
+
+interface HeroProps {
+  images?: HeroImage[];
+}
+
+export default function Hero({ images }: HeroProps) {
+  const heroImages =
+    images && images.length > 0 ? images : fallbackHeroImages;
+  const [active, setActive] = useState(0);
+
+  useEffect(() => {
+    if (heroImages.length <= 1) return;
+    const id = setInterval(() => {
+      setActive((prev) => (prev + 1) % heroImages.length);
+    }, INTERVAL_MS);
+    return () => clearInterval(id);
+  }, [heroImages.length]);
+
   return (
-    <section className="relative flex min-h-[100svh] items-end overflow-hidden">
+    <section className="relative flex min-h-[100svh] items-end overflow-hidden bg-ink">
       <div className="absolute inset-0">
-        <Image
-          src={heroImage.src}
-          alt={heroImage.alt}
-          fill
-          priority
-          className="object-cover animate-fade-in"
-          sizes="100vw"
-        />
+        {heroImages.map((image, index) => (
+          <Image
+            key={image.src}
+            src={image.src}
+            alt={image.alt}
+            fill
+            priority={index === 0}
+            className={`object-cover transition-opacity duration-[2000ms] ease-in-out ${
+              index === active ? "opacity-100" : "opacity-0"
+            }`}
+            sizes="100vw"
+          />
+        ))}
         <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/45 to-ink/25" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_0%,_rgba(15,15,15,0.35)_100%)]" />
       </div>
@@ -38,6 +69,20 @@ export default function Hero() {
               →
             </span>
           </a>
+        </div>
+
+        <div className="animate-fade-up animate-delay-300 mt-12 flex items-center gap-2">
+          {heroImages.map((image, index) => (
+            <button
+              key={image.src}
+              type="button"
+              aria-label={`Show slide ${index + 1}`}
+              onClick={() => setActive(index)}
+              className={`h-1 rounded-full transition-all duration-500 ${
+                index === active ? "w-8 bg-white" : "w-4 bg-white/40"
+              }`}
+            />
+          ))}
         </div>
       </div>
     </section>
