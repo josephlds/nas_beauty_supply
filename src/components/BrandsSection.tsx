@@ -1,4 +1,4 @@
-import { companies } from "@/data/companies";
+import { companies, pillars } from "@/data/companies";
 import BrandShowcase from "./BrandShowcase";
 
 export default function BrandsSection() {
@@ -18,6 +18,19 @@ export default function BrandsSection() {
             and science-backed wellness — each brand stands on its own while
             sharing one foundation of quality.
           </p>
+        </div>
+
+        <div className="mt-16 grid gap-10 border-t border-border pt-16 sm:mt-20 sm:pt-20 md:grid-cols-3 md:gap-8 lg:gap-12">
+          {pillars.map((pillar) => (
+            <div key={pillar.title} className="text-center md:text-left">
+              <h3 className="font-serif text-xl tracking-tight text-ink sm:text-2xl">
+                {pillar.title}
+              </h3>
+              <p className="mt-4 text-[14px] leading-7 text-muted">
+                {pillar.description}
+              </p>
+            </div>
+          ))}
         </div>
 
         <div className="mt-6">

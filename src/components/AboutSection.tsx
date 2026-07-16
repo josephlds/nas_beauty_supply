@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { aboutImage, pillars } from "@/data/companies";
+import { aboutImage } from "@/data/companies";
 
 export default function AboutSection() {
   return (
@@ -29,7 +29,7 @@ export default function AboutSection() {
             href="#brands"
             className="group mt-10 inline-flex items-center gap-2 border-b border-accent/40 pb-0.5 text-[13px] font-medium tracking-[0.12em] text-accent uppercase transition-colors hover:border-accent"
           >
-            Read More
+            Our Brands
             <span
               aria-hidden="true"
               className="transition-transform duration-300 group-hover:translate-x-1"
@@ -47,21 +47,6 @@ export default function AboutSection() {
             className="object-cover"
             sizes="(max-width: 1024px) 100vw, 50vw"
           />
-        </div>
-      </div>
-
-      <div className="border-t border-border bg-background">
-        <div className="mx-auto grid max-w-6xl gap-10 px-6 py-16 sm:py-20 md:grid-cols-3 md:gap-8 lg:gap-12">
-          {pillars.map((pillar) => (
-            <div key={pillar.title}>
-              <h3 className="font-serif text-xl tracking-tight text-ink sm:text-2xl">
-                {pillar.title}
-              </h3>
-              <p className="mt-4 text-[14px] leading-7 text-muted">
-                {pillar.description}
-              </p>
-            </div>
-          ))}
         </div>
       </div>
     </section>

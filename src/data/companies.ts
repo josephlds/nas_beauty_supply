@@ -76,8 +76,8 @@ export const pillars: Pillar[] = [
 ];
 
 export const heroImage = {
-  src: "/images/hero-ccare-cuticle-lux.jpg",
-  alt: "Beauty product photography from the NAS Beauty Supply portfolio",
+  src: "/images/hero-nas-atmosphere.jpg",
+  alt: "Soft morning light in a refined spa interior — the atmosphere of NAS Beauty Supply",
 };
 
 export const aboutImage = {

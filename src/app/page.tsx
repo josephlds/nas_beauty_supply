@@ -11,9 +11,9 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <AboutSection />
         <BrandsSection />
         <ContactSection />
+        <AboutSection />
       </main>
       <Footer />
     </>
