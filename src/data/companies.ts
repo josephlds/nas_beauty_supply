@@ -25,7 +25,7 @@ export const companies: Company[] = [
       "Luxury nail essentials — signature cuticle oils, polish removers, and treatments — crafted for stronger nails, lasting color, and polished results every day.",
     logo: "/images/logos/ccare.png",
     logoAlt: "C Care Beauty — Love yourself",
-    image: "/images/Generated Image July 15, 2026 - 1_04AM.jpg",
+    image: "/images/Generated Image July 21, 2026 - 12_08AM.jpg",
     imageAlt:
       "C Care Beauty product collection on vanity — cuticle oil, castor oil, cuticle remover, and lip oil",
   },
