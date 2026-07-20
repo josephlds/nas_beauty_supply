@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     "beauty brands",
     "parent company",
   ],
+  icons: {
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+  },
   openGraph: {
     title: "NAS Beauty Supply | Our Brands",
     description:
