@@ -29,6 +29,9 @@ export const metadata: Metadata = {
   icons: {
     icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
   },
+  verification: {
+    google: "xiKWzB0udNidgnj7JzYn_B_4DTyTAj2j3wYlamI8Dzo",
+  },
   openGraph: {
     title: "NAS Beauty Supply | Our Brands",
     description:
